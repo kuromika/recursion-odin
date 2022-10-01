@@ -1,12 +1,9 @@
-function fibsRecursive(n, arr = [0, 1], prev = 0, current = 1) {
-    if (n == 1) {
-        return [0];
-    }
-    if (n-2 === 0) {
+function fibsRecursive(n, arr = [0, 1]) {
+    if (n <= 2) {
         return arr;
     }
-    arr.push(prev + current);
-    return fibsRecursive(n - 1, arr, current, prev + current);
+    arr.push(arr.length - 1 + arr.length - 2);
+    return fibsRecursive(n - 1, arr);
 
 }
 
@@ -22,4 +19,3 @@ function fibs(n) {
 }
 
 console.log(fibsRecursive(5));
-console.log(fibs(5));
