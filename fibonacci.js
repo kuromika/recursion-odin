@@ -1,5 +1,5 @@
 function fibsRecursive(n, arr = [0, 1]) {
-    if (n <= 2) {
+    if (n < 2) {
         return arr;
     }
     arr.push(arr.length - 1 + arr.length - 2);
