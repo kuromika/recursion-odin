@@ -13,7 +13,6 @@ function merge(arrA, arrB) {
     let i = 0;
     let j = 0; 
     const ordered = [];
-    console.log(`A:${arrA}, B: ${arrB}`);
     while (i < arrA.length && j < arrB.length) {
         if (arrA[i] < arrB[j]) {
             ordered.push(arrA[i]);
